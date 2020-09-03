@@ -1,6 +1,5 @@
-import { StatusBar } from "expo-status-bar";
 import React from "react";
-import { StyleSheet, Text, View, Image, TouchableOpacity } from "react-native";
+import { Image, TouchableOpacity } from "react-native";
 import { AppLoading } from "expo";
 import { useFonts } from "expo-font";
 import { createStackNavigator } from "@react-navigation/stack";
@@ -14,7 +13,10 @@ const theme = {
     border: "transparent",
   },
 };
-import { FONTS } from "./src/constants";
+
+import { COLORS, SIZES, icons } from "./src/constants";
+
+const Stack = createStackNavigator();
 
 export default function App() {
   let [fontsLoaded] = useFonts({
@@ -27,19 +29,39 @@ export default function App() {
     return <AppLoading />;
   } else {
     return (
-      <View style={styles.container}>
-        <Text style={{ ...FONTS.body2 }}>Welcome To Trip Booking App!</Text>
-        <StatusBar style="auto" />
-      </View>
+      <NavigationContainer style={theme}>
+        <Stack.Navigator initialRouteName="Onboarding">
+          {/* screen  */}
+          <Stack.Screen
+            name="Onboarding"
+            component={Onboarding}
+            options={{
+              title: null,
+              headerStyle: {
+                backgroundColor: COLORS.white,
+              },
+              headerLeft: null,
+              headerRight: () => (
+                <TouchableOpacity
+                  style={{
+                    marginRight: SIZES.padding,
+                  }}
+                  onPress={() => console.log("pressed!")}
+                >
+                  <Image
+                    source={icons.barMenu}
+                    resizeMode="contain"
+                    style={{
+                      height: 25,
+                      width: 25,
+                    }}
+                  />
+                </TouchableOpacity>
+              ),
+            }}
+          />
+        </Stack.Navigator>
+      </NavigationContainer>
     );
   }
 }
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: "#fff",
-    alignItems: "center",
-    justifyContent: "center",
-  },
-});
