@@ -5,7 +5,12 @@ import {useFonts} from 'expo-font';
 import {createStackNavigator} from '@react-navigation/stack';
 import {NavigationContainer, DefaultTheme} from '@react-navigation/native';
 
+// screens
 import {Onboarding, DestinationDetail} from './src/screens';
+
+// tabs
+import Tabs from './src/navigation/tab';
+
 const theme = {
   ...DefaultTheme,
   colors: {
