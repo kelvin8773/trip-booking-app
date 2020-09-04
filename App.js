@@ -1,28 +1,28 @@
-import React from "react";
-import { Image, TouchableOpacity } from "react-native";
-import { AppLoading } from "expo";
-import { useFonts } from "expo-font";
-import { createStackNavigator } from "@react-navigation/stack";
-import { NavigationContainer, DefaultTheme } from "@react-navigation/native";
+import React from 'react';
+import {Image, TouchableOpacity} from 'react-native';
+import {AppLoading} from 'expo';
+import {useFonts} from 'expo-font';
+import {createStackNavigator} from '@react-navigation/stack';
+import {NavigationContainer, DefaultTheme} from '@react-navigation/native';
 
-import { Onboarding, DestinationDetail } from "./src/screens";
+import {Onboarding, DestinationDetail} from './src/screens';
 const theme = {
   ...DefaultTheme,
   colors: {
     ...DefaultTheme.colors,
-    border: "transparent",
+    border: 'transparent',
   },
 };
 
-import { COLORS, SIZES, icons } from "./src/constants";
+import {COLORS, SIZES, icons} from './src/constants';
 
 const Stack = createStackNavigator();
 
 export default function App() {
   let [fontsLoaded] = useFonts({
-    "Roboto-Regular": require("./src/assets/fonts/Roboto-Regular.ttf"),
-    "Roboto-Bold": require("./src/assets/fonts/Roboto-Bold.ttf"),
-    "Roboto-Black": require("./src/assets/fonts/Roboto-Black.ttf"),
+    'Roboto-Regular': require('./src/assets/fonts/Roboto-Regular.ttf'),
+    'Roboto-Bold': require('./src/assets/fonts/Roboto-Bold.ttf'),
+    'Roboto-Black': require('./src/assets/fonts/Roboto-Black.ttf'),
   });
 
   if (!fontsLoaded) {
@@ -46,8 +46,7 @@ export default function App() {
                   style={{
                     marginRight: SIZES.padding,
                   }}
-                  onPress={() => console.log("pressed!")}
-                >
+                  onPress={() => console.log('pressed!')}>
                   <Image
                     source={icons.barMenu}
                     resizeMode="contain"
@@ -60,6 +59,8 @@ export default function App() {
               ),
             }}
           />
+          {/* tabs  */}
+          <Stack.Screen name="Home" component={Tabs} />
         </Stack.Navigator>
       </NavigationContainer>
     );
