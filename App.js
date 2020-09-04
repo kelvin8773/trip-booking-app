@@ -9,7 +9,7 @@ import {NavigationContainer, DefaultTheme} from '@react-navigation/native';
 import {Onboarding, DestinationDetail} from './src/screens';
 
 // tabs
-import Tabs from './src/navigation/tab';
+import Tabs from './src/navigation/tabs';
 
 const theme = {
   ...DefaultTheme,

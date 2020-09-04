@@ -12,7 +12,7 @@ import {LinearGradient} from 'expo-linear-gradient';
 
 import {COLORS, images, SIZES, FONTS} from '../constants';
 
-const Onboarding = () => (
+const Onboarding = ({navigation}) => (
   <SafeAreaView style={styles.container}>
     <View style={{flex: 1, alignItems: 'center', justifyContent: 'center'}}>
       <Image
@@ -46,7 +46,7 @@ const Onboarding = () => (
             justifyContent: 'center',
           },
         ]}
-        onPress={() => console.log('Home')}>
+        onPress={() => navigation.navigate('Home')}>
         <LinearGradient
           style={{
             height: '100%',

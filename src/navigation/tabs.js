@@ -25,7 +25,7 @@ const tabOptions = {
 const Tabs = () => (
   <Tab.Navigator
     tabBarOptions={tabOptions}
-    screenOptions={({route}) => {
+    screenOptions={({route}) => ({
       tabBarIcon: ({focused}) => {
         const tintColor = focused ? COLORS.primary : COLORS.gray;
         switch (route.name) {
@@ -62,8 +62,8 @@ const Tabs = () => (
               />
             );
         }
-      };
-    }}>
+      },
+    })}>
     <Tab.Screen name="Home" component={Home} />
     <Tab.Screen name="Search" component={Home} />
     <Tab.Screen name="Bookmark" component={Home} />
