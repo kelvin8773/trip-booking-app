@@ -1,4 +1,5 @@
 import icons from './icons';
+import images from './images';
 
 export const optionItems = [
   {
@@ -32,15 +33,38 @@ export const optionItems = [
     label: 'Eat',
   },
   {
-    icon: icons.event,
+    icon: icons.compass,
     bgColor: ['#7be993', '#46caaf'],
-    label: 'Event',
+    label: 'Adventure',
   },
   {
-    icon: icons.compass,
+    icon: icons.event,
     bgColor: ['#fca397', '#fc7b6c'],
-    label: 'Adventure',
+    label: 'Event',
   },
 ];
 
-export default {optionItems};
+export const destinations = [
+  {
+    id: 0,
+    name: 'Ski Villa',
+    img: images.skiVilla,
+  },
+  {
+    id: 1,
+    name: 'Climbing Hills',
+    img: images.climbingHills,
+  },
+  {
+    id: 2,
+    name: 'Frozen Hills',
+    img: images.frozenHills,
+  },
+  {
+    id: 3,
+    name: 'Beach',
+    img: images.beach,
+  },
+];
+
+export default {optionItems, destinations};
