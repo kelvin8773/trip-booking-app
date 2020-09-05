@@ -10,7 +10,7 @@ import {
 
 import {LinearGradient} from 'expo-linear-gradient';
 
-import {COLORS, images, SIZES, FONTS} from '../constants';
+import {COLORS, images, SIZES, FONTS, styles} from '../constants';
 
 const Onboarding = ({navigation}) => (
   <SafeAreaView style={styles.container}>
@@ -64,22 +64,5 @@ const Onboarding = ({navigation}) => (
     </View>
   </SafeAreaView>
 );
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: COLORS.white,
-  },
-  shadow: {
-    shadowColor: '#000',
-    shadowOffset: {
-      width: 0,
-      height: 2,
-    },
-    shadowOpacity: 0.25,
-    shadowRadius: 3.84,
-    elevation: 5,
-  },
-});
 
 export default Onboarding;

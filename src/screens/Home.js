@@ -15,6 +15,7 @@ import {
   images,
   optionItems,
   destinations,
+  styles,
 } from '../constants';
 
 const Home = ({navigation}) => {
@@ -152,22 +153,5 @@ const Home = ({navigation}) => {
     </View>
   );
 };
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: COLORS.white,
-  },
-  shadow: {
-    shadowColor: '#000',
-    shadowOffset: {
-      width: 0,
-      height: 2,
-    },
-    shadowOpacity: 0.25,
-    shadowRadius: 3.84,
-    elevation: 5,
-  },
-});
 
 export default Home;
