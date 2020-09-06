@@ -21,6 +21,8 @@
     },
     "web": {
       "favicon": "./src/assets/favicon.png"
-    }
+    },
+    "description": "Trip Booking App Screen Mocking",
+    "githubUrl": "https://github.com/kelvin8773/trip-booking-app"
   }
 }

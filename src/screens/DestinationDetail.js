@@ -192,7 +192,7 @@ const DestinationDetail = ({navigation}) => (
               marginHorizontal: SIZES.padding,
               justifyContent: 'center',
             }}>
-            <Text style={{...FONTS.h1}}>$10000</Text>
+            <Text style={{...FONTS.h1}}>$799</Text>
           </View>
           <TouchableOpacity
             style={{
