@@ -13,3 +13,7 @@ A Learning project for React Native Beginner.
 - React Native
 - Expo
 - React-Navigation
+
+## Project Demo
+
+[Expo Link](https://expo.io/@kelvin9877/tripBooking) - Need Install Expo app in your phone to see it.
